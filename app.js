@@ -14,4 +14,6 @@ var app = http.createServer(function(request,response){
     response.end(fs.readFileSync(__dirname + url));
  
 });
-app.listen(3000);
+app.listen(3000, function(){
+    console.log('Migration Agent Listen on port ' + app.address().port);
+});
